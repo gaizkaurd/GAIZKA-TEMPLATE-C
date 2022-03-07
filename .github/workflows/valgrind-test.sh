@@ -1,10 +1,10 @@
-name: valgrind-test
+name: valgrind
 on: [push, pull_request]
 
 jobs:
   valgrind:
     runs-on: ubuntu-latest
-    name: valgrind-test
+    name: 42valgrind
     steps:
     - uses: actions/checkout@v2
     - name: 42valgrind Leak checker
