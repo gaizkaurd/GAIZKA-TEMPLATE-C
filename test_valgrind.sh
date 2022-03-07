@@ -1,0 +1,2 @@
+make
+valgrind ./a.out
