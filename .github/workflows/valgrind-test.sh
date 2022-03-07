@@ -1,0 +1,13 @@
+name: valgrind-test
+on: [push, pull_request]
+
+jobs:
+  valgrind:
+    runs-on: ubuntu-latest
+    name: valgrind-test
+    steps:
+    - uses: actions/checkout@v2
+    - name: 42valgrind Leak checker
+      uses: solareenlo/42valgrind-action@v1.0.3
+      with:
+        flags: 'sh test_valgrind.sh'
